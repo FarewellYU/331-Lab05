@@ -1,11 +1,13 @@
+<!-- src/App.vue -->
 <script setup lang="ts">
-import { RouterLink, RouterView, useRouter } from 'vue-router'
+import { RouterLink, RouterView, useRouter, useRoute } from 'vue-router'
 import { useMessageStore } from './stores/message';
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue'
 
 const perPage = ref(2)
 const router = useRouter()
+const route = useRoute()
 const store = useMessageStore()
 const { message } = storeToRefs(store)
 
@@ -18,7 +20,7 @@ function updatePerPage(size: number) {
 <template>
   <div id="layout">
     <header>
-      <div id = "flashMessage" v-if = "message">
+      <div v-if="message && !route.name.startsWith('event-detail')" id="flashMessage">
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
@@ -82,16 +84,16 @@ nav a.router-link-exact-active {
   background: linear-gradient(145deg, #3d8eff, #6ac1ff);
   transform: translateY(1px);
 }
- 
- @keyframes yellofade {
+
+@keyframes yellofade {
   from {
     background-color: yellow;
   }
   to {
     background-color: transparent;
   }
- }
- #flashMessage {
+}
+#flashMessage {
   animation: yellofade 3s ease-in-out;
- }
+}
 </style>
