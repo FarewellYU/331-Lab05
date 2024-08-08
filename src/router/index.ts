@@ -9,6 +9,7 @@ import EventLayoutView from '@/views/event/LayoutView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 import { NewLineKind } from 'typescript'
 import NetworkErrorView from '@/views/NetworkErrorView.vue'
+import nProgress from 'nprogress'
 
 
 const router = createRouter({
@@ -77,6 +78,13 @@ const router = createRouter({
     }
     
   ]
+})
+router.beforeEach(() => {
+  nProgress.start()
+})
+
+router.afterEach(() => {
+  nProgress.done()
 })
 
 export default router
