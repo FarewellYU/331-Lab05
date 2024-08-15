@@ -6,16 +6,16 @@ defineProps<{
 </script>
  
 <template>
-  <div class ="student-class">
-    <div class="student-card">
+  <div class="flex justify-center">
+    <div class="p-5 w-64 cursor-pointer border border-gray-600 mb-4 hover:scale-[1.01] hover:shadow-sp transition-transform duration-300">
       <h2>{{ student.name }} {{ student.surname }}</h2>
-      <span>GPA :   {{ student.gpa }}</span>
+      <span>GPA: {{ student.gpa }}</span>
     </div>
   </div>
 </template>
  
 <style scoped>
-.student-card {
+/* .student-card {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -25,6 +25,6 @@ defineProps<{
 .student-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 </style>
  

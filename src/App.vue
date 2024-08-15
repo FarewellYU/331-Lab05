@@ -43,7 +43,7 @@ function updatePerPage(size: number) {
   </div>
 </template>
 
-<style>
+<style> 
 /* #layout {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

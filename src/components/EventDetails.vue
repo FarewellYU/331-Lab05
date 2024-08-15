@@ -17,14 +17,14 @@ defineProps<{
 </script>
 
 <template>
-  <div class="event-details">
+  <div class="p-5 w-64 cursor-pointer border border-gray-600 mb-4 flex flex-col items-end hover:scale-[1.01] hover:shadow-sp transition-transform duration-300">
     <h2>{{ event.category }}</h2>
     <span>{{ event.organizer }}</span>
   </div>
 </template>
 
 <style scoped>
-.event-details {
+/* .event-details {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -37,5 +37,5 @@ defineProps<{
 .event-details:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 </style>

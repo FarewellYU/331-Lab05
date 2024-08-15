@@ -7,8 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params: { id: event.id } }">
-    <div class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-101 hover:shadow-sp">
+  <RouterLink class="text-blue-500 no-underline hover:underline" :to="{ name: 'event-detail-view', params: { id: event.id } }">
+    <div class="cursor-pointer border border-gray-600 p-5 w-64 mb-4 hover:scale-[1.01] hover:shadow-sp transition-transform duration-300">
       <h2>{{ event.title }}</h2>
       <span>@{{ event.time }} on {{ event.date }}</span>
     </div>
@@ -16,7 +16,7 @@ defineProps<{
 </template>
 
 <style scoped>
-.event-card {
+/* .event-card {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -31,5 +31,5 @@ defineProps<{
 .event-link {
   text-decoration: none;
   color: #54a3f3;
-}
+} */
 </style>
