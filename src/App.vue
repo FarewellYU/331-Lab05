@@ -18,7 +18,7 @@ function updatePerPage(size: number) {
 </script>
 
 <template>
-  <div id="layout">
+  <div class="text-center font-sans text-gray-700 antialias">
     <header>
       <div v-if="message && !route.name.startsWith('event-detail')" id="flashMessage">
         <h4>{{ message }}</h4>
@@ -31,26 +31,26 @@ function updatePerPage(size: number) {
         </nav>
       </div>
     </header>
-    <div class="pagination-controls">
+    <!-- <div class="pagination-controls">
       <button @click="updatePerPage(1)">Show 1 per page</button>
       <button @click="updatePerPage(2)">Show 2 per page</button>
       <button @click="updatePerPage(3)">Show 3 per page</button>
       <button @click="updatePerPage(4)">Show 4 per page</button>
       <button @click="updatePerPage(5)">Show 5 per page</button>
       <button @click="updatePerPage(6)">Show 6 per page</button>
-    </div>
+    </div> -->
     <RouterView :key="$route.fullPath" />
   </div>
 </template>
 
 <style>
-#layout {
+/* #layout {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+} */
 nav {
   padding: 30px;
 }
