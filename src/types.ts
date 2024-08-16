@@ -9,21 +9,22 @@ export interface Event {
   petsAllowed: boolean
   organizer: string
 }
-// export interface Student{
-//   id: number,
-//   studentId: string,
-//   name: string,
-//   surname: string,
-//   gpa: number,
-//   imgge: string,
-//   penAmount: number,
-//   description: string
-// }
-export default interface Student {
-  name: string;
-  surname: string;
-  gpa: number;
+export interface Student{
+  id: number,
+  studentId: string,
+  name: string,
+  surname: string,
+  gpa: number,
+  imgge: string,
+  penAmount: number,
+  description: string
 }
+// export interface Student {
+//   id:number
+//   name: string;
+//   surname: string;
+//   gpa: number;
+// }
 export interface MessageState {
   message : string
 }
